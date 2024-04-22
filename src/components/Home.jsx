@@ -1,5 +1,7 @@
 import Button from "../layouts/Button";
-import img from "../assets/img/hero8.png";
+// import img from "../assets/img/hero8.png";
+import img from "../assets/img/feature.jpg";
+
 import { Link } from "react-scroll";
 
 const Home = () => {
@@ -23,7 +25,7 @@ const Home = () => {
         </div>
       </div>
       <div className=" mt-14 lg:mt-0 w-full lg:w-4/5">
-        <img src={img} alt="img" />
+        <img src={img} alt="img" className="rounded-lg" />
       </div>
     </div>
   );
