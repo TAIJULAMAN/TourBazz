@@ -8,7 +8,7 @@ const About = () => {
     <div className=" min-h-screen flex flex-col justify-center lg:flex-row items-center md:px-32 px-5 bg-darkBackground gap-10">
       <div className=" w-full lg:w-2/4 space-y-5">
         <h1 className=" font-semibold text-4xl text-white leading-tight">
-          At Nomads Tour, we are ready to provide you with the best trip of your
+          At Tour Bazz, we are ready to provide you with the best trip of your
           life!
         </h1>
         <p className=" text-[#bdbdbd] pb-5">

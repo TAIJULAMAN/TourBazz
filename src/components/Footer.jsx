@@ -7,9 +7,9 @@ const Footer = () => {
     <div className="bg-darkBackground text-white">
       <div className="flex flex-col md:flex-row justify-between p-8 md:px-32 px-5">
         <div className=" w-full md:w-1/4">
-          <h1 className=" font-semibold text-xl pb-4">Nomads Tour</h1>
+          <h1 className=" font-semibold text-xl pb-4">Tour Bazz</h1>
           <p className=" text-sm">
-            With Nomads Tour you can experience new travel and the best tourist
+            With Tour Bazz you can experience new travel and the best tourist
             destinations that we have to offer
           </p>
         </div>
