@@ -17,7 +17,7 @@ const Navbar = () => {
       <div className=" flex flex-row justify-between p-5 md:px-32 px-5 bg-darkBackground text-white">
         <div className=" flex items-center">
           <Link to="/" spy={true} smooth={true} duration={500}>
-            <h1 className=" font-semibold text-xl cursor-pointer">Nomads Tour</h1>
+            <h1 className=" font-semibold text-xl cursor-pointer">Tour Bazz</h1>
           </Link>
         </div>
         <nav className="hidden lg:flex flex-row items-center gap-6">
