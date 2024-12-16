@@ -1,33 +1,46 @@
-import img1 from "../assets/img/hero3.jpg";
-import img2 from "../assets/img/hero4.jpg";
-import img3 from "../assets/img/hero6.jpg";
-
+import { motion } from "framer-motion";
 import DestinationCard from "../layouts/DestinationCard";
 
 const Destination = () => {
   return (
-    <div className=" min-h-screen flex flex-col justify-center md:mx-32 mx-5">
-      <h1 className=" font-medium text-center text-4xl lg:mt-0 mt-16">
+    <div className="min-h-screen flex flex-col justify-center md:mx-32 mx-5 py-12">
+      {/* Header */}
+      <motion.h1
+        className="text-4xl font-bold text-center text-gray-800"
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
         Most Popular Destinations
-      </h1>
+      </motion.h1>
 
-      <div className=" flex flex-col lg:flex-row gap-5 mt-14">
+      {/* Destination Cards */}
+      <motion.div
+        className="flex flex-col lg:flex-row gap-8 mt-14"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={{
+          hidden: { opacity: 0 },
+          visible: { opacity: 1, transition: { staggerChildren: 0.3 } },
+        }}
+      >
         <DestinationCard
-          img={img1}
+          img="/hero3.jpg"
           title="Bandarban"
-          para="It is one of the three hill districts of Bangladesh and a part of the Chittagong Hill Tracts, the others being Rangamati District and Khagrachhari District."
+          para="Explore the mesmerizing hills and tranquil landscapes of Bandarban, a serene escape in the Chittagong Hill Tracts."
         />
         <DestinationCard
-          img={img2}
+          img="/hero4.jpg"
           title="Sundarbans"
-          para="Sundarbans is a mangrove area in the delta formed by the confluence of the Ganges, Brahmaputra and Meghna Rivers in the Bay of Bengal."
+          para="Journey into the world's largest mangrove forest, home to majestic Royal Bengal Tigers and breathtaking biodiversity."
         />
         <DestinationCard
-          img={img3}
+          img="/hero6.jpg"
           title="St. Martin Island"
-          para="St. Martin is a small island in the north eastern part of the Bay of Bengal, created the southernmost part of our country."
+          para="Relax on the pristine beaches of St. Martin Island, a tropical paradise nestled in the Bay of Bengal."
         />
-      </div>
+      </motion.div>
     </div>
   );
 };

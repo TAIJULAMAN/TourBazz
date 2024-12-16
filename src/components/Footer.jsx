@@ -1,91 +1,116 @@
-import { BsFacebook } from "react-icons/bs";
+import { BsFacebook, BsInstagram } from "react-icons/bs";
 import { RiTwitterXFill } from "react-icons/ri";
-import { BsInstagram } from "react-icons/bs";
 
 const Footer = () => {
   return (
-    <div className="bg-darkBackground text-white">
-      <div className="flex flex-col md:flex-row justify-between p-8 md:px-32 px-5">
-        <div className=" w-full md:w-1/4">
-          <h1 className=" font-semibold text-xl pb-4">Tour Bazz</h1>
-          <p className=" text-sm">
-            With Tour Bazz you can experience new travel and the best tourist
-            destinations that we have to offer
+    <div className="bg-white text-gray-800 pt-[40px] md:pt-[80px]">
+      {/* Top Section */}
+      <div className="flex flex-col md:flex-row justify-between gap-10 md:px-32 px-6 py-10">
+        {/* About Section */}
+        <div className="w-full md:w-1/4">
+          <h1 className="font-semibold text-2xl pb-4">Tour Bazz</h1>
+          <p className="text-sm leading-relaxed text-gray-600">
+            Explore the world's top travel destinations with Tour Bazz and enjoy 
+            unforgettable experiences crafted for every adventurer.
           </p>
         </div>
+
+        {/* Destination Section */}
         <div>
-          <h1 className=" font-medium text-xl pb-4 pt-5 md:pt-0">
-            Destination
-          </h1>
-          <nav className=" flex flex-col gap-2">
+          <h2 className="font-medium text-xl pb-4">Destinations</h2>
+          <nav className="flex flex-col gap-3">
             <a
-              className=" hover:text-brightColor transition-all cursor-pointer"
+              className="hover:text-[#cb6ce6] transition-all duration-300 cursor-pointer"
               href="/"
             >
               Bandarban
             </a>
             <a
-              className=" hover:text-brightColor transition-all cursor-pointer"
+              className="hover:text-[#cb6ce6] transition-all duration-300 cursor-pointer"
               href="/"
             >
-             Sundarbans
+              Sundarbans
             </a>
             <a
-              className=" hover:text-brightColor transition-all cursor-pointer"
+              className="hover:text-[#cb6ce6] transition-all duration-300 cursor-pointer"
               href="/"
             >
-             St. Martin Island
+              St. Martin Island
             </a>
           </nav>
         </div>
+
+        {/* About Section */}
         <div>
-          <h1 className=" font-medium text-xl pb-4 pt-5 md:pt-0">About</h1>
-          <nav className=" flex flex-col gap-2">
+          <h2 className="font-medium text-xl pb-4">About</h2>
+          <nav className="flex flex-col gap-3">
             <a
-              className=" hover:text-brightColor transition-all cursor-pointer"
+              className="hover:text-[#cb6ce6] transition-all duration-300 cursor-pointer"
               href="/"
             >
               Contact Us
             </a>
             <a
-              className=" hover:text-brightColor transition-all cursor-pointer"
+              className="hover:text-[#cb6ce6] transition-all duration-300 cursor-pointer"
               href="/"
             >
-              Testimonial
+              Testimonials
             </a>
             <a
-              className=" hover:text-brightColor transition-all cursor-pointer"
+              className="hover:text-[#cb6ce6] transition-all duration-300 cursor-pointer"
               href="/"
             >
-              Rating
+              Ratings
             </a>
           </nav>
         </div>
+
+        {/* Follow Us Section */}
         <div>
-          <h1 className=" font-medium text-xl pb-4 pt-5 md:pt-0">Follow Us</h1>
-          <nav className=" flex flex-col md:items-center gap-2">
-            <BsFacebook
-              size={25}
-              className="hover:text-brightColor transition-all cursor-pointer"
-            />
-            <RiTwitterXFill
-              size={25}
-              className=" hover:text-brightColor transition-all cursor-pointer"
-            />
-            <BsInstagram
-              size={25}
-              className=" hover:text-brightColor transition-all cursor-pointer"
-            />
-          </nav>
+          <h2 className="font-medium text-xl pb-4">Follow Us</h2>
+          <div className="flex gap-5">
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+            >
+              <BsFacebook
+                size={28}
+                className="hover:text-[#cb6ce6] transition-all duration-300 cursor-pointer"
+              />
+            </a>
+            <a
+              href="https://twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Twitter"
+            >
+              <RiTwitterXFill
+                size={28}
+                className="hover:text-[#cb6ce6] transition-all duration-300 cursor-pointer"
+              />
+            </a>
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+            >
+              <BsInstagram
+                size={28}
+                className="hover:text-[#cb6ce6] transition-all duration-300 cursor-pointer"
+              />
+            </a>
+          </div>
         </div>
       </div>
-      <div>
-        <p>
-          <p className=" text-center py-4">
-            @copyright developed by
-            <span className=" text-orange-600"> Md Shah Aman Patwary</span> | All
-            rights reserved
-          </p>
+
+      {/* Bottom Section */}
+      <div className="border-t border-gray-300">
+        <p className="text-center text-gray-600 text-sm py-4">
+          © {new Date().getFullYear()} Developed by{" "}
+          <span className="text-[#cb6ce6] font-medium">Md Shah Aman Patwary</span> | All rights reserved.
         </p>
       </div>
     </div>

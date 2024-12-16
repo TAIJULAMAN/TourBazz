@@ -1,72 +1,113 @@
-// import img from "../assets/img/feature.jpg";
-import img from "../assets/img/hero2.jpg";
-
-import pic1 from "../assets/img/service.png";
-import pic2 from "../assets/img/user.png";
-import pic3 from "../assets/img/wallet.png";
+import { motion } from "framer-motion";
 
 const Features = () => {
-  return (
-    <div className=" min-h-screen flex flex-col lg:flex-row items-center md:mx-32 mx-5 gap-14">
-      <div className=" w-full lg:w-2/4">
-        <div className=" space-y-4">
-          <h1 className=" text-4xl font-medium text-center md:text-start leading-tight">
-            Get Ready to Explore, Get Ready to Experience!
-          </h1>
-          <p>
-            Discover the Best Holiday Experiences with Tour Bazz! We are
-            dedicated to curating the latest and greatest destinations from
-            around the world, ensuring you always get the ultimate travel
-            experience.
-          </p>
-        </div>
+  // Animation Variants
+  const fadeIn = (direction = "up", delay = 0) => ({
+    hidden: { opacity: 0, y: direction === "up" ? 40 : -40 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8, delay } },
+  });
 
-        <div className="w-full lg:w-3/5 mt-10 lg:ml-14">
+  return (
+    <div className="min-h-screen flex flex-col lg:flex-row items-center justify-between md:mx-32 mx-5 gap-14 py-12">
+      {/* Left Section */}
+      <motion.div
+        className="w-full lg:w-2/4 space-y-6"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
+        <motion.h1
+          className="text-4xl font-bold text-center lg:text-start leading-tight text-gray-800"
+          variants={fadeIn("up", 0)}
+        >
+          Get Ready to Explore, Get Ready to Experience!
+        </motion.h1>
+        <motion.p
+          className="text-gray-600 text-lg text-center lg:text-start"
+          variants={fadeIn("up", 0.2)}
+        >
+          Discover the best holiday experiences with{" "}
+          <span className="font-semibold text-[#cb6ce6]">Tour Bazz</span>! From
+          iconic landmarks to hidden gems, we handpick destinations to give you
+          extraordinary adventures and lasting memories.
+        </motion.p>
+
+        <motion.div
+          className="w-full lg:w-4/5 mt-8 lg:ml-10"
+          variants={fadeIn("up", 0.4)}
+        >
           <img
-            className=" rounded-xl shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)]"
-            src={img}
-            alt="img"
+            className="rounded-xl shadow-[0_10px_40px_rgba(0,0,0,0.2)]"
+            src="/hero2.jpg"
+            alt="Explore"
           />
-        </div>
-      </div>
-      <div className=" w-full lg:w-2/4 space-y-10">
-        <div className=" flex flex-row gap-5">
-          <div className=" flex flex-row items-center w-24">
-            <img src={pic1} alt="img" />
+        </motion.div>
+      </motion.div>
+
+      {/* Right Section */}
+      <motion.div
+        className="w-full lg:w-2/4 space-y-8"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
+        {/* Feature 1 */}
+        <motion.div
+          className="flex items-start gap-6"
+          variants={fadeIn("up", 0.6)}
+        >
+          <div className="w-20">
+            <img src='/service.png' alt="Service" />
           </div>
-          <div className=" space-y-3">
-            <h1 className=" font-semibold text-xl">Friendly Service</h1>
-            <p className=" text-[#898888]">
-              We will provide excellent and friendly service for the sake of our
-              customers.
+          <div className="space-y-2">
+            <h2 className="text-xl font-semibold text-gray-800">
+              Friendly Service
+            </h2>
+            <p className="text-gray-600">
+              Our dedicated team ensures a seamless and friendly experience
+              every step of your journey.
             </p>
           </div>
-        </div>
-        <div className=" flex flex-row gap-5">
-          <div className=" flex flex-row items-center w-28">
-            <img src={pic2} alt="img" />
+        </motion.div>
+
+        {/* Feature 2 */}
+        <motion.div
+          className="flex items-start gap-6"
+          variants={fadeIn("up", 0.8)}
+        >
+          <div className="w-20">
+            <img src="/user.png" alt="Experience" />
           </div>
-          <div className=" space-y-3">
-            <h1 className=" font-semibold text-xl">Unforgettable experience</h1>
-            <p className=" text-[#898888]">
-              We will provide excellent and Unforgettable experience for the
-              sake of our customers.
+          <div className="space-y-2">
+            <h2 className="text-xl font-semibold text-gray-800">
+              Unforgettable Experiences
+            </h2>
+            <p className="text-gray-600">
+              Immerse yourself in remarkable adventures tailored to create
+              memories you'll cherish forever.
             </p>
           </div>
-        </div>
-        <div className=" flex flex-row gap-5">
-          <div className="flex flex-row items-center w-24">
-            <img src={pic3} alt="img" />
+        </motion.div>
+
+        {/* Feature 3 */}
+        <motion.div
+          className="flex items-start gap-6"
+          variants={fadeIn("up", 1)}
+        >
+          <div className="w-20">
+            <img src="/wallet.png" alt="Pricing" />
           </div>
-          <div className=" space-y-3">
-            <h1 className=" font-semibold text-xl">Affordable prices</h1>
-            <p className=" text-[#898888]">
-              We will provide excellent and Affordable prices for the sake of
-              our customers.
+          <div className="space-y-2">
+            <h2 className="text-xl font-semibold text-gray-800">
+              Affordable Prices
+            </h2>
+            <p className="text-gray-600">
+              Enjoy world-class experiences at prices that won't break the bank.
+              Quality and affordability guaranteed!
             </p>
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </div>
   );
 };

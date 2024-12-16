@@ -1,14 +1,39 @@
 import React from "react";
 
-const Button = (props) => {
+const Button = ({
+  title = "Click Me",
+  backgroundColor = "bg-[#cb6ce6]",
+  textColor = "text-white",
+  hoverBackgroundColor = "hover:bg-[#6a50d4]",
+  hoverTextColor = "hover:text-white",
+  className = "",
+  onClick,
+  ariaLabel = "button",
+}) => {
   return (
-    <div>
-      <button
-        className={` bg-orange-600 text-black rounded-full px-8 py-2 font-medium hover:bg-[#8482FF] hover:text-white transition-all`}
-      >
-        {props.title}
-      </button>
-    </div>
+    <button
+      className={`
+        ${backgroundColor} 
+        ${textColor} 
+        rounded-full 
+        px-8 
+        py-3 
+        font-semibold 
+        shadow-md 
+        hover:shadow-lg 
+        transition-all 
+        duration-300 
+        transform 
+        hover:scale-105
+        ${hoverBackgroundColor} 
+        ${hoverTextColor}
+        ${className}
+      `}
+      onClick={onClick}
+      aria-label={ariaLabel}
+    >
+      {title}
+    </button>
   );
 };
 
