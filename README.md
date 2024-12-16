@@ -39,7 +39,7 @@ Follow the steps below to get the project up and running on your local machine:
 
 ```bash
 git clone https://github.com/TAIJULAMAN/TourBazz.git
-cd hospital-website
+cd tour-bazz
 ```
 
 ### 2. **Install Dependencies**
